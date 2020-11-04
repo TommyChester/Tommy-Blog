@@ -1,0 +1,18 @@
+
+<h1>Here are articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Stuff</th>
+    <th></th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
